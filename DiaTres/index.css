@@ -1,0 +1,157 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #1D1E22;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center::after{
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 1000;
+  animation: filtroSombra 4s infinite;
+}
+
+.contenedor{
+  width: 50%;
+  height: 50%;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+@keyframes filtroSombra{
+  50%{
+    background-color: #1d1e2200;
+  }
+  100%{
+    background-color: #1D1E22;
+  }
+}
+
+.cielo{
+  width: 100%;
+  height: 90%;
+  background: #71C8E2;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+}
+
+.cielo::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 40%;
+  bottom: -50px;
+  background: rgba(68, 68, 68, 0.2);
+  clip-path: polygon(72% 0, 0 0, 100% 6%);
+  animation: sombraPiramide 4s infinite;
+}
+
+@keyframes sombraPiramide{
+	0%{
+		clip-path: polygon(16% 0, 100% 14%, 84.5% 0);
+	}
+	50%{
+		clip-path: polygon(16% 0, 84.5% 90%, 84.5% 0);
+	}
+	100%{
+		clip-path: polygon(16% 0, 0 6%, 84.5% 0);
+	}
+}
+
+.piso{
+  width: 100%;
+  height: 50%;
+  background: #D4C46A;
+}
+
+.piramid{
+  width: 70%;
+  height: 50%;
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.piramid-l{
+  width: 0;
+  height: 0;
+  flex: 1;
+  border-bottom: 65px solid white;
+  border-left: 80px solid transparent;
+  border-right: 5px solid transparent;
+  z-index: 1;
+}
+
+.piramid-r{
+  flex: 1;
+  border-bottom: 65px solid rgb(209, 208, 208);
+  border-left: 0px solid transparent;
+  border-right: 60px solid transparent;
+  margin-left: -5px;
+}
+
+.contenedor_sol{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  animation: movimientoSol 4s infinite;
+  animation-timing-function: ease;
+}
+
+.sol{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: yellow;
+  position: absolute;
+  top: 60px;
+  left: -20px;
+}
+
+@keyframes movimientoSol{
+  50%{
+    transform: translate(40px,20px) rotate(40deg);
+  }
+  100%{
+    transform: translate(0px,50px) rotate(160deg);
+  }
+}
