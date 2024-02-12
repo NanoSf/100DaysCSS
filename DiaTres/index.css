@@ -37,7 +37,7 @@
   height: 100%;
   position: absolute;
   background-color: rgba(0, 0, 0, 0);
-  z-index: 1000;
+  z-index: 2;
   animation: filtroSombra 4s infinite;
 }
 
@@ -108,7 +108,7 @@
   margin: 0 auto;
   position: relative;
   overflow: hidden;
-  z-index: 100;
+  z-index: 2;
 }
 
 .piramid-l{
@@ -119,6 +119,19 @@
   border-left: 80px solid transparent;
   border-right: 5px solid transparent;
   z-index: 1;
+  animation: colorPiramideUno 4s infinite;
+}
+
+@keyframes colorPiramideUno {
+  0%{
+    border-bottom: 65px solid white;
+  }
+  90%{
+    border-bottom: 65px solid rgb(209, 208, 208);
+  }
+  100%{
+    border-bottom: 65px solid rgb(209, 208, 208);
+  }
 }
 
 .piramid-r{
@@ -127,8 +140,20 @@
   border-left: 0px solid transparent;
   border-right: 60px solid transparent;
   margin-left: -5px;
+  animation: colorPiramideDos 4s infinite;
 }
 
+@keyframes colorPiramideDos {
+  0%{
+    border-bottom: 65px solid rgb(209, 208, 208);
+  }
+  90%{
+    border-bottom: 65px solid white;
+  }
+  100%{
+    border-bottom: 65px solid white;
+  }
+}
 .contenedor_sol{
   width: 100%;
   height: 100%;
