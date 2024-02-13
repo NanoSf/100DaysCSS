@@ -24,4 +24,214 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
+
+  height: 220px;
+	width: 280px;
+  overflow: hidden;
+  border-radius: 2px;
+  box-shadow: 2px 3px 2px 0 rgba(0, 0, 0, 0.21);
 }
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #F1BA64;
+  color: white;
+}
+
+h2,
+h5,
+h2,
+h5{
+  margin: 0;
+  padding: 0;
+}
+.otros{
+  text-align: right;
+}
+.fecha h2,
+.otros h5{
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.fecha h5,
+.otros h2{
+  font-weight: 400;
+  font-size: 11px;
+}
+
+.grafico{
+  height: 100%;
+  background-color: white;
+}
+
+.informacion{
+  max-height: 20%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 50px;
+  font-size: 13px;
+  padding: 20px 8px 20px 0;
+}
+
+.informacion h5{
+  position: relative;
+}
+
+.red::before{
+  position: absolute;
+  left: -15px;
+  bottom: 0;
+  transform: translate(-50%,-50%);
+  content: '';
+  display: inline-block;
+  width: 13px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: #FA7373;
+}
+
+.azul::before{
+  position: absolute;
+  left: -15px;
+  bottom: 0;
+  transform: translate(-50%,-50%);
+  content: '';
+  display: inline-block;
+  width: 13px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: #7BA2FF;
+}
+
+.plano{
+  border-top: 1px solid #94a1c050;
+  border-bottom: 1px solid #94a1c050;
+  max-height: 60%;
+  height: 81px;
+  margin: 0 9px;
+  position: relative;
+}
+.plano::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+  background: #94a1c050;
+}
+
+.plano__red,
+.plano__blue{
+  position: absolute;
+}
+.plano__red-line,
+.plano__blue-line {
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  
+}
+.red-line{
+  stroke: #FA7373;
+}
+.blue-line{
+  stroke: #7BA2FF;
+}
+.circle{
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+.plano__red-red{
+  background-color: #FA7373;
+}
+.redUno{
+  left: 7.5px;
+  top: 40px;
+}
+
+.redDos{
+  left: 47px;
+  top: 9px;
+}
+
+.redTres{
+  left: 86px;
+  top: 19px;
+}
+
+.redCuatro{
+  left: 126px;
+  top: 8px;
+}
+
+.redCinco{
+  left: 168px;
+  top: 35px;
+}
+
+.redSeis{
+  left: 208px;
+  top: 43px;
+}
+
+.redSiete{
+  left: 247px;
+  top: 15px;
+}
+
+.plano__red-blue{
+  background-color: #7BA2FF;
+}
+
+.blueUno{
+  left: 6px;
+  top: 57px;
+}
+
+.blueDos{
+  left: 46px;
+  top: 46px;
+}
+
+.blueTres{
+  left: 86px;
+  top: 61px;
+}
+
+.blueCuatro{
+  left: 126px;
+  top: 51px;
+}
+
+.blueCinco{
+  left: 167px;
+  top: 57px;
+}
+
+.blueSeis{
+  left: 207px;
+  top: 70px;
+}
+
+.blueSiete{
+  left: 247px;
+  top: 60px;
+}
+
+.dias{
+  position: absolute;
+  width: 100%;
+  bottom: -20px;
+  display: flex;
+  justify-content: space-between;
+  color: #949494;
+  font-size: 9px;
+}
+
